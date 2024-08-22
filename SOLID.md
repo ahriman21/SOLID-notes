@@ -31,6 +31,10 @@ class DeliveryPerson:
 
 ```
 
+
+---
+
+
 #### 2- Open/Closed Principle (OCP)
 classes, modules, and objects must be open to expand but closed for changes
 
@@ -70,6 +74,10 @@ class RussianHello(Hello):
 		pass 
 
 ```
+
+
+---
+
 
 #### 3- Liskov Substitution Principle (LSP)
 if class B is a subclass of class A, class B should not change the behavior of class A. In other words, a superclass should be replaceable with objects of its subclass without affecting the correctness of the program. for example, if one function of the superclass(parent) is not fit for a subclass and if a subclass instance uses the function it will break the application, then the LSP is not implemented.
@@ -133,6 +141,10 @@ if class B is a subclass of class A, class B should not change the behavior of c
   
 ```
 
+
+---
+
+
 #### 4- Interface Segregation Principle (ISP)
 a class doesn't have to implement methods that it does not need.
 
@@ -168,6 +180,10 @@ class Eagle(Animal, FlyableAnimal):
     def run()
     def eat()
 ```
+
+
+---
+
 
 #### 5- Dependency Inversion Principle (DIP)
 high-level classes must have no dependency on low-level classes.
