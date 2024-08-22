@@ -72,37 +72,66 @@ class RussianHello(Hello):
 ```
 
 #### 3- Liskov Substitution Principle (LSP)
-if class B is a subclass of class A, class B should not change the behavior of class A.
+if class B is a subclass of class A, class B should not change the behavior of class A. In other words, a superclass should be replaceable with objects of its subclass without affecting the correctness of the program. for example, if one function of the superclass(parent) is not fit for a subclass and if a subclass instance uses the function it will break the application, then the LSP is not implemented.
 
-
+* without LSP
 ```python
-class A { ... }
-x = new A;
+  # models
+  class User:
+      def init(self, name, email, ...):
+  	...
+  
+      def show_info(self):
+  	return self.email + ' ' + self.name
 
-// ...
+      def go_to_my_admin_panel(self):
+  	if self.super_user:
+  	    return reverse(admin_panel, self.id)
 
-y = new A;
+  class SuperUser(User):
+  	...
 
-// ...
+  class Customer(User):
+  	...
 
-z = new A;
+  # example
+  admin1 = SuperUser(...)
+  admin1.go_to_my_admin_panel() # OK
+  
+  customer1 = Customer(...)
+  customer1.go_to_my_admin_panel() # --> This will throw an error
+  ```
 
+* with LSP
+```python
 
-class B extends A { ... }
+  # models
+  class User:
+      def init(self, name, email, ...):
+  	...
+  
+      def show_info(self):
+  	return self.email + ' ' + self.name
 
-x = new B;
+      def go_to_my_admin_panel(self):
+  	pass
 
-// ...
+  class SuperUser(User):
+      def go_to_my_admin_panel(self):
+	if self.super_user:
+  	    return reverse(admin_panel, self.id)
 
-y = new B;
+  class Customer(User):
+  	...
 
-// ...
-
-z = new B;
-
+  # example
+  admin1 = SuperUser(...)
+  admin1.go_to_my_admin_panel() # OK
+  
+  customer1 = Customer(...)
+  customer1.go_to_my_admin_panel() # NONE, OK
+  ```
 ```
-
-
 
 #### 4- Interface Segregation Principle (ISP)
 a class doesn't have to implement methods that it does not need.
