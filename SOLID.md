@@ -1,11 +1,11 @@
 # SOLID
-what is SOLID in software engineering? To have an optimized, efficient, and maintainable code we can use SOLID principles in software developement.
+what is SOLID in software engineering? To have an optimized, efficient, and maintainable code we can use SOLID principles in software development.
 
-### What is SOLID principle?
+### What is the SOLID principle?
 SOLID contains 5 principles. if you do use the principles in your codes, then your code is SOLID
 
 
-#### 1- SRP(single responsibility principle)
+#### 1- Single Responsibility Principle (SRP)
 each class must have only one job or one task to do.
 
 * without SRP
@@ -31,8 +31,8 @@ class DeliveryPerson:
 
 ```
 
-#### 2- open/closed principle (OCP)
-calsses, modules and objects must be open to expand but closed for changes
+#### 2- Open/Closed Principle (OCP)
+classes, modules, and objects must be open to expand but closed for changes
 
 * without OCP
 ```python
@@ -71,8 +71,8 @@ class RussianHello(Hello):
 
 ```
 
-#### 3- liskov substitution principle
-if class B is a subclass of class A, class B shouldnot change the behaviour of class A.
+#### 3- Liskov Substitution Principle (LSP)
+if class B is a subclass of class A, class B should not change the behavior of class A.
 
 
 ```python
@@ -104,8 +104,8 @@ z = new B;
 
 
 
-#### 4- interface segregation principle (ISP)
-a class doesn't have to implement methods that it doesnot need.
+#### 4- Interface Segregation Principle (ISP)
+a class doesn't have to implement methods that it does not need.
 
 * without ISP
 ```python
@@ -140,8 +140,8 @@ class Eagle(Animal, FlyableAnimal):
     def eat()
 ```
 
-#### 5- dependency inversion principle (DIP)
-high level classes must have no dependency to low level classes.
+#### 5- Dependency Inversion Principle (DIP)
+high-level classes must have no dependency on low-level classes.
 
 * without DIP
 ```
