@@ -130,7 +130,7 @@ if class B is a subclass of class A, class B should not change the behavior of c
   
   customer1 = Customer(...)
   customer1.go_to_my_admin_panel() # NONE, OK
-  ```
+  
 ```
 
 #### 4- Interface Segregation Principle (ISP)
